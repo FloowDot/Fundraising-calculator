@@ -19,8 +19,3 @@ profitGoal = noAlpha("Please enter the profit goal for your compaign: ")
 #Make sure profit goal is a number
 
 
-
-#Error checking
-
-
-
