@@ -1,21 +1,21 @@
 
+import csv
 #Not blank function goes here
-def noAlpha(question):
-  while True:
-    response = input(question)
-    for letter in response:
-      if letter.isalpha():
-        continue
-      else:
-        if response == "":
-          continue
-        else:
-          return response
 
-hasErrors = False
+def noLetters (question):
+  valid = False
+  while not valid:
+    response = input(question)
+    onlyNumbers = response.isdecimal()
+    if onlyNumbers == False:
+      continue
+    else: 
+      return response
+
+
 
 #Get user profit goal
-profitGoal = noAlpha("Please enter the profit goal for your compaign: ")
+profitGoal = noLetters("Please enter the profit goal for your compaign: ")
 #Make sure profit goal is a number
 
-
+print(profitGoal)
