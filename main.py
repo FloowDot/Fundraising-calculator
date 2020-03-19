@@ -11,7 +11,14 @@ def noLetters (question):
     else: 
       return response
 
+def noNumbers (question):
+  valid = False
+  response = input(question)
+  for letter in response:
+    if letter.isdigit() == True:
+      hasLetter == True
 
+#Get name of campaign
 
 #Get user profit goal
 profitGoal = noLetters("Please enter the profit goal for your campaign: ")
@@ -19,11 +26,13 @@ profitGoal = noLetters("Please enter the profit goal for your campaign: ")
 
 print(profitGoal)
 
+#Create a list of the products
 productList = []
 valid = False
 while not valid:
   product = input("Enter product name, enter  xx to finish list:")
   productList.append(product)
   if product == "xx":
-    print("Heres your list: ", productList)
+    productList.pop()
+    print("Heres your list: \n", productList)
     break
